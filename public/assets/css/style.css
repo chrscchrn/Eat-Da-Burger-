@@ -1,0 +1,8 @@
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    background: rgb(221, 104, 27);
+    color: rgb(235, 235, 236);
+    font-family: "Helvetica", "Avenir Next", "Helvetica Neue";
+    box-sizing: border-box;
+}
