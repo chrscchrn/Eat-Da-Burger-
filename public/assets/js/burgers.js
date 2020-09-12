@@ -1,17 +1,15 @@
-$(function() {
-    $(".devour").on("click", (event) => {
+$(() => {
+    $(".eatButton").on("click", function(event) {
         var id = $(this).data("id");
-    
-        var newDevourState = {
-            devoured: true
+        var newDevoured = $(this).data("newdevoured");
+        var newDevouredState = {
+            devoured: newDevoured
         };
-    
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: newDevourState
+            data: newDevouredState
         }).then(
             () => {
-                console.log("you devoured burger", id);
                 location.reload();
             }
         );
@@ -19,7 +17,7 @@ $(function() {
   
     $(".create-form").on("submit", (event) => {
         event.preventDefault();
-        console.log()
+        console.log("created");
         var newBurger = {
             name: $("#ca").val().trim(),
         };

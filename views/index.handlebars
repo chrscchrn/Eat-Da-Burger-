@@ -1,22 +1,26 @@
-<h1>To-do List</h1>
+<h1 id="title">Burgers Burgers Burgers</h1>
 
-burgers that havent been eaten
-<ul>
+<img src="https://media3.giphy.com/media/i4bWPx9KZWeMph3ZLv/source.gif" alt="Dancing Burger" class="inherit" width="200" height="200">
+
+<p>Burgers that have been eaten</p>
+  
+<ol>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers devoured=false}}
+      {{> burger devoured=true}}
     {{/unless}}
   {{/each}}
-</ul> 
+</ol> 
 
-burgers that have been eaten
-<ul>
+<p>Burgers that havent been eaten</p>
+
+<ol>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers devoured=true}}
+      {{> burger devoured=false}}
     {{/if}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>Add a Burger!</h2>
 <form class="create-form">
